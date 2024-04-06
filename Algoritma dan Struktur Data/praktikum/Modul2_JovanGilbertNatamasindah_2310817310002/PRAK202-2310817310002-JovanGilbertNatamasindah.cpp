@@ -47,7 +47,7 @@ void hapus() {
 
 void tampil() {
     if (kosong() == 0) {
-        cout << "Isi Stack: ";
+        
         for (int i = Tumpuk.atas; i >= 0; i--) {
             cout << Tumpuk.data[i] << " ";
         }
