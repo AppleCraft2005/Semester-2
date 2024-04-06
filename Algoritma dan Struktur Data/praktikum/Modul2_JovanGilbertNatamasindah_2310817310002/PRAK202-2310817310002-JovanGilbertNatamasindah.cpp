@@ -49,7 +49,7 @@ void tampil() {
     if (kosong() == 0) {
         
         for (int i = Tumpuk.atas; i >= 0; i--) {
-            cout << Tumpuk.data[i] << " ";
+            cout << "\nTumpukan Ke " << i << " = " << Tumpuk.data[i];
         }
         cout << endl;
     } else {
