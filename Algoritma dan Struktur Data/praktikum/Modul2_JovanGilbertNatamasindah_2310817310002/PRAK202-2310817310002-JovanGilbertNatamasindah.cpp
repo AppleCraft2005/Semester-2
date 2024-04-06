@@ -25,8 +25,8 @@ int penuh() {
     else
         return 0;
 }
-
-void input(int data) {
+# fungsi input harus diubah
+input(int data) {
     if (kosong() == 1 || penuh() == 0) {
         Tumpuk.atas++;
         Tumpuk.data[Tumpuk.atas] = data;
