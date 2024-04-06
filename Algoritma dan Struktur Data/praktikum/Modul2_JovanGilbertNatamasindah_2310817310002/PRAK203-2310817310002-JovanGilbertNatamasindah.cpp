@@ -91,7 +91,7 @@ int main(){
         system("cls");
     }
 
-    while (PIL != 4);
+    while (PIL < 4);
 
 }
 
