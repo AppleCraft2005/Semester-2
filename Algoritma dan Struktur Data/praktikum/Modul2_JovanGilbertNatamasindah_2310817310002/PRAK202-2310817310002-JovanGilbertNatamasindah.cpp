@@ -25,36 +25,47 @@ int penuh() {
     else
         return 0;
 }
-# fungsi input harus diubah
-input(int data) {
-    if (kosong() == 1 || penuh() == 0) {
+
+void input(int data) {
+    if (kosong() == 1) {
         Tumpuk.atas++;
         Tumpuk.data[Tumpuk.atas] = data;
         cout << "Data " << Tumpuk.data[Tumpuk.atas] << " Masuk Ke Stack" << endl;
-    } else {
-        cout << "Tumpukan Penuh" << endl;
+    } 
+
+    else if(penuh() == 0) {
+        Tumpuk.atas++;
+        Tumpuk.data[Tumpuk.atas] = data;
+        cout << "Data " << Tumpuk.data[Tumpuk.atas] << " Masuk Ke Stack" << endl;
     }
+    
+    else 
+        cout << "Tumpukan Penuh" << endl;
+    
 }
 
 void hapus() {
     if (kosong() == 0) {
         cout << "Data Teratas Sudah Terambil" << endl;
         Tumpuk.atas--;
-    } else {
+    } 
+    
+    else 
         cout << "Data Kosong" << endl;
-    }
+    
 }
 
 void tampil() {
     if (kosong() == 0) {
         
         for (int i = Tumpuk.atas; i >= 0; i--) {
-            cout << "\nTumpukan Ke " << i << " = " << Tumpuk.data[i];
+            cout << "\nTumpukan Ke " << i << " = " << Tumpuk.data[i] << endl;
         }
-        cout << endl;
-    } else {
+    } 
+    
+    else 
         cout << "Tumpukan Kosong" << endl;
-    }
+    
 }
 
 void bersih() {
