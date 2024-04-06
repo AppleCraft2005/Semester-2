@@ -25,8 +25,8 @@ int penuh() {
     else
         return 0;
 }
-
-void input(int data) {
+# fungsi input harus diubah
+input(int data) {
     if (kosong() == 1 || penuh() == 0) {
         Tumpuk.atas++;
         Tumpuk.data[Tumpuk.atas] = data;
@@ -47,9 +47,9 @@ void hapus() {
 
 void tampil() {
     if (kosong() == 0) {
-        cout << "Isi Stack: ";
+        
         for (int i = Tumpuk.atas; i >= 0; i--) {
-            cout << Tumpuk.data[i] << " ";
+            cout << "\nTumpukan Ke " << i << " = " << Tumpuk.data[i];
         }
         cout << endl;
     } else {
