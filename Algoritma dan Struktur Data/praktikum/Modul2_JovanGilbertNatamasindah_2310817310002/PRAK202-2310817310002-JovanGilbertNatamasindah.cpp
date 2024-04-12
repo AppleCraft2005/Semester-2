@@ -81,10 +81,10 @@ int main() {
     do {
         cout << "STACK" << endl;
         cout << "==========" << endl;
-        cout << "1. Input Data" << endl;
-        cout << "2. Hapus Data" << endl;
-        cout << "3. Tampil Stack" << endl;
-        cout << "4. Kosongkan Stack" << endl;
+        cout << "1. Masukkan ke Stack" << endl;
+        cout << "2. Hapus dari Stack" << endl;
+        cout << "3. Tampilkan isi Stack" << endl;
+        cout << "4. Kosongkan isi Stack" << endl;
         cout << "5. Keluar" << endl;
         cout << "Pilihan: ";
         cin >> pilihan;
@@ -115,6 +115,6 @@ int main() {
         
     } 
 
-    while (pilihan != 5);
+    while (pilihan < 5);
 
 }
