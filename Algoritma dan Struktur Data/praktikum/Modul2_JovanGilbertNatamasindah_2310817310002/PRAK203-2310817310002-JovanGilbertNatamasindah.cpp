@@ -10,39 +10,41 @@ char Q[n];
 
 void INSERT() {
     if (R == n - 1) {
-        cout << "Queue Penuh" << endl;  
+        cout << "Queue sudah Penuh" << endl;  
     } 
 
     else {
         if (F == -1) {
             F = 0;
         }
-        cout << "Masukkan Huruf: ";
+        cout << "Silahkan masukkan Huruf ke Queue: ";
         cin >> HURUF;
+
         R++;
         Q[R] = HURUF;
-        cout << "Huruf " << Q[R] << " dimasukkan ke dalam Queue" << endl;
+
+        cout << "Huruf " << Q[R] << " sudah berada didalam Queue" << endl;
     }
 }
 
 void DELETE() {
     if (F == -1 || F > R) {
-        cout << "queue kosong" << endl;
+        cout << "Isi queue kosong" << endl;
     } 
 
     else {
-        cout << "Huruf yang dihapus adalah " << Q[F] << endl;
+        cout << "Huruf yang dihapus dari dalam queue adalah " << Q[F] << endl;
         F++;
     }
 }
 
 void CETAKLAYAR() {
     if (F == -1 || F > R) {
-        cout << "Queue Kosong" << endl;
+        cout << "Isi Queue Kosong" << endl;
     } 
 
     else {
-        cout << "Huruf-Huruf dalam Queue adalah: ";
+        cout << "Huruf-Huruf dalam Queue adalah ";
         for (int i = F; i <= R; i++) {
             cout << Q[i] << " ";
         }
@@ -51,11 +53,13 @@ void CETAKLAYAR() {
 }
 
 void Inisialisasi()  {
-    F = R = -1;
+    F = -1;
+    R = -1;
 }
 
 void RESET() {
-    F = R = -1;
+    F = -1;
+    R = -1;
 }
 
 int main(){
