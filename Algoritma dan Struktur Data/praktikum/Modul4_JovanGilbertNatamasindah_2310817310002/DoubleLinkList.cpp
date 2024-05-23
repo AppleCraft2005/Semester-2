@@ -160,21 +160,23 @@ int isEmptyHT() {
 }
 
 void tambahDepanH() {
-    cout<<"Masukkan data : ";
+    cout << "Masukkan data : ";
+    cin >> dataBaru;
 
+    TNode *baru;
+    baru = new TNode;
+    baru->data = dataBaru;
+    baru->next = NULL;
+    baru->prev = NULL;
 
-
-
-
-
-
-
-
-
-
-
-
-    cout << "Data \""<<dataBaru<<"\" berhasil dimasukkan di dibagian depan.";
+    if (isEmptyH() == 1) {
+        head = baru;
+    } else {
+        baru->next = head;
+        head->prev = baru;
+        head = baru;
+    }
+    cout << "Data \""<<dataBaru<<"\" berhasil dimasukkan di dibagian depan."<<endl;
 }
 
 void tambahDepanHT() {
