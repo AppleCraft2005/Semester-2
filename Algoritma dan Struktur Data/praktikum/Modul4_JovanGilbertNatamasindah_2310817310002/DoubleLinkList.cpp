@@ -255,7 +255,7 @@ void tampilkanHT() {
     bantu = head;
     if(isEmptyHT() == 0) {
         while(bantu != tail->next) {
-            cout<<bantu->data<<' ';
+            cout<<head->data<<' ';
             bantu = bantu -> next;
         }
         cout<<endl;
