@@ -243,7 +243,7 @@ void tampilkanH() {
     bantu = head;
     if(isEmptyH() == 0) {
         while(bantu != NULL) {
-            cout<<bantu->data<<' ';
+            cout<<head->data<<' ';
             bantu = bantu->next;
         }
         cout<<endl;
