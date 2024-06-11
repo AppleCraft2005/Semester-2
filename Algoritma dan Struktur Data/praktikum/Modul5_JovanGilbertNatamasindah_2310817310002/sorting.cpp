@@ -60,37 +60,6 @@ int main() {
 } 
 
 int bubbleSort() {
-    // int data[13];
-    // int swap;
-
-    // cout<<"========Bubble Sort========"<<endl;
-
-    // cout<<"Masukkan Data : ";
-    // for(int i=0 ; i<13 ; i++) {
-    //     cin >> data[i];
-    // }
-    // cout<<endl;
-
-    // cout<<"Data sebelum diurutkan : "<< endl;
-    // for(int i=0 ; i<13 ; i++) {
-    //     cout<<setw(3)<<data[i];
-    // }
-    // cout<<endl;
-
-    // for(int i=0 ; i<13 ; i++) {
-    //     for(int j=0 ; j<13 ; j++) {
-    //         if(data[j] > data[j+1]) {
-    //             swap = data[j];
-    //             data[j] = data[j+1];
-    //             data[j+1] = swap;
-    //         }
-    //     }
-    // }
-    // cout<<"Data setelah diurutkan : "<< endl;
-    // for(int i=0 ; i<13 ; i++ ) {
-    //     cout<<setw(3)<<data[i];
-    // }
-
     string data;
     int swap;
 
@@ -157,12 +126,6 @@ int selectionSort() {
 
 }
 
-void Swap(int& a, int& b) {
-    int temp = a;
-     a = b;
-     b = temp;
-}
-
 int Partition(string& data, int Low , int High) {
     int pivot = data[High];
     int i = Low -1;
@@ -170,13 +133,11 @@ int Partition(string& data, int Low , int High) {
     for(int j = Low ; j < High ; j++) {
         if(data[j] <= pivot) {
             i++;
-            // Swap(data[i], data[j]);
             int swap = data[i];
             data[i] = data[j];
             data[j] = swap;
         }
     }
-    // Swap(data[i+1],data[High]);
     int swap = data[i+1];
     data[i+1]=data[High];
     data[High]=swap;
@@ -193,29 +154,6 @@ void QuickSort(string& data, int Low, int High) {
 }
 
 int quickSort() {
-    // int data[13];
-    // int Low = 0;
-    // int High = 12;
-
-    // cout<<"========Quick Sort========"<<endl;
-
-    // cout<< "Masukkan data : ";
-    // for(int i=0 ; i<13 ; i++) {
-    //     cin >> data[i];
-    // }
-
-    // cout<<"Data sebelum diurutkan : "<<endl;
-    // for(int i=0 ; i<13 ; i++) {
-    //     cout<<setw(3)<<data[i];
-    // }
-    // cout<<endl;
-
-    // QuickSort(data, Low, High);
-
-    // cout<<"Data setelah diurutkan : "<<endl;
-    // for(int i=0 ; i<13 ; i++) {
-    //     cout<<setw(3)<<data[i];
-    // }
     string data;
     int Low = 0;
 
